@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'ls'
+                script {
+                    echo "Current directory: ${pwd()}"
+                    sh 'ls'
+                }
             }
         }
     }
